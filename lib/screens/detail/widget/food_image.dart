@@ -1,0 +1,62 @@
+import 'package:flutter/material.dart';
+import 'package:food_delivery_app/constants/colors.dart';
+import 'package:food_delivery_app/models/food.dart';
+
+class FoodImage extends StatelessWidget {
+  final Food food;
+  FoodImage(this.food);
+  
+
+
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      height: 300,
+      child: Stack(
+        children: [
+          Column(
+            children: [
+              Expanded( 
+          flex: 2,
+          child: Container(),
+            ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              decoration: BoxDecoration(
+                color: kBackground,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(50),
+                  topRight: Radius.circular(50),
+                ),
+              ),
+          ),)
+            ],
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: CircleAvatar(
+              radius: 150,
+              backgroundImage: AssetImage(food.imgUrl),
+              // child: Container(
+              //   margin: EdgeInsets.all(15),
+              //   width: 250,
+              //   height: 250,
+              //   decoration: BoxDecoration(
+              //     shape: BoxShape.circle,
+              //     boxShadow: [
+              //       BoxShadow(
+              //         color: Colors.grey.withOpacity(0.3),
+              //         offset: Offset(-1, 10),
+              //       )
+              //     ]
+              //   ),
+              //   child: Image.asset(food.imgUrl, fit: BoxFit.cover),
+              //           ),
+            ),
+          ), 
+        ],
+      ),
+    );
+  }
+}

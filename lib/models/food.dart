@@ -57,7 +57,7 @@ class Food {
           {"Bun": "assets/images/burgers/01.jpg"},
           {"Patty": "assets/images/burgers/02.jpg"},
         ],
-        "Juicy burger with fresh veggies",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi magna, tincidunt eget molestie id, pulvinar sed felis. Nunc bibendum, ligula et sagittis varius, est velit consequat magna, non iaculis velit lectus sed tortor. Suspendisse nec lacus nec elit efficitur consectetur. Nunc mattis, ex vitae placerat congue, elit ante lacinia ex, vel commodo nunc dui et massa.",
         highlight: true,
       ),
       Food(

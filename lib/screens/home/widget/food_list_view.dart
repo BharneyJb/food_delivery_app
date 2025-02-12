@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/screens/detail/detail.dart';
 
 import '../../../models/restaurant.dart';
 import 'food_item.dart';
@@ -21,8 +22,16 @@ FoodListView(this.selected, this.callback, this.pageController, this.restaurant)
           category.map((e) => 
           ListView.separated(
             padding: EdgeInsets.zero,
-              itemBuilder: (context, index) => FoodItem(
-                restaurant.menu[category[selected]]![index],
+              itemBuilder: (context, index) => 
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => DetailPage(
+                      restaurant.menu[category[selected]]![index])));
+                },
+                child: FoodItem(
+                  restaurant.menu[category[selected]]![index],
+                ),
               ),
               separatorBuilder: (_, index) => SizedBox(height: 15),
               itemCount: restaurant.menu[category[selected]]!.length)).toList()

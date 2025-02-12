@@ -16,13 +16,10 @@ class FoodItem extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Container(
-              height: 110,
-              width: 110,
-              padding: EdgeInsets.all(5),
-              child: Image.asset(
-                food.imgUrl,
-                fit: BoxFit.cover,
+            CircleAvatar(
+              radius: 60,
+              backgroundImage: AssetImage(
+                food.imgUrl
               ),
             ),
             Expanded(
